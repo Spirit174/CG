@@ -1,0 +1,108 @@
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.input-block label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-block input {
+    box-sizing: border-box;
+    width: 200px;
+    font-size: 16px;
+}
+
+.button-block {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.button-block button {
+    box-sizing: border-box;
+    width: 150px;
+    font-size: 16px;
+    margin-top: 27px;
+
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+.button-block button:hover {
+    background-color: #000000;
+}
+
+textarea {
+    resize: none;
+    height: 200px;
+}
+
+.textarea-block {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+  }
+
+.textarea-block textarea {
+    padding: 10px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    width: 200px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.one {
+    flex-direction: column;
+}
+
+.textarea-block label {
+    font-weight: bold;
+}
+
+.result-block {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+  
+.result-block span {
+    font-weight: bold;
+}
+  
+.result-block textarea {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    width: 310px;
+    height: 170px;
+    font-size: 16px;
+}
+
+#execute {
+    text-align: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+#execute:hover {
+    background-color: #000000;
+}
