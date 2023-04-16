@@ -1,0 +1,64 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+html {
+	height: 100%;
+	position: relative;
+}
+
+:root {
+	--sideMargin: 10px;
+	--navBarHeight: 40px;
+}
+.main-container {
+	margin-top: var(--navBarHeight);
+}
+
+#mainContainer{
+	width: 100%;
+	margin-left: var(--sideMargin);
+	margin-right: var(--sideMargin);
+}
+
+#LabelOneRow{
+	border: 2px solid black;
+	border-left: 0px;
+	border-bottom: 0px;
+	border-right: 0px;
+}
+
+#LabelCircleInfoRow{
+	border: 2px solid black;
+	border-left: 0px;
+	border-bottom: 0px;
+	border-right: 0px;
+}
+
+#LabelEllipseInfoRow{
+	border: 2px solid black;
+	border-left: 0px;
+	border-bottom: 0px;
+	border-right: 0px;
+}
+
+#LabelSpectre{
+	border: 2px solid black;
+	border-left: 0px;
+	border-bottom: 0px;
+	border-right: 0px;
+}
+
+#Menu {
+	height: var(--navBarHeight);
+}
+
+.row{
+	margin-top: 3px;
+}
+
+#Canvas{
+	width: 100%;
+	aspect-ratio: 10/7;
+	border: 2px solid black;
+	position: relative;
+	align-self: center;
+}

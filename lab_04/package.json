@@ -1,0 +1,19 @@
+{
+  "name": "lab_04",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-dev": "sass --watch --update --style=expanded scss:css",
+    "sass-prod": "sass --no-source-map --style=compressed scss:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha1",
+    "chart.js": "^4.2.1",
+    "sass": "^1.62.0"
+  }
+}
