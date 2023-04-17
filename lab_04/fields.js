@@ -3,10 +3,10 @@ FigureSelect.addEventListener('change', selectFigureContainer)
 
 const CircleContainer = document.getElementById("CircleContainer")
 export const CircleVariableParamsFields = {
-	"startRadius": {"unavailable": document.getElementById("btn-check-CircleStart"), "value": document.getElementById("CircleStartRadius")},
-	"endRadius": {"unavailable": document.getElementById("btn-check-CircleEnd"), "value": document.getElementById("CircleEndradius")},
-	"step": {"unavailable": document.getElementById("btn-check-CircleStep"), "value": document.getElementById("CircleStep")},
-	"count": {"unavailable": document.getElementById("btn-check-CircleCount"), "value": document.getElementById("CircleCount")}
+	"StartRadius": {"unavailable": document.getElementById("btn-check-CircleStart"), "value": document.getElementById("CircleStartRadius")},
+	"EndRadius": {"unavailable": document.getElementById("btn-check-CircleEnd"), "value": document.getElementById("CircleEndRadius")},
+	"Step": {"unavailable": document.getElementById("btn-check-CircleStep"), "value": document.getElementById("CircleStep")},
+	"Count": {"unavailable": document.getElementById("btn-check-CircleCount"), "value": document.getElementById("CircleCount")}
 }
 disableParamFields(Object.values(getUnavailableFields(CircleVariableParamsFields)))
 document.CircleParams.CircleParamsRadios.forEach(radio => {
