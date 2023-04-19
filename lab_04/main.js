@@ -1,6 +1,7 @@
 import { readCircle } from "./circle.js";
 import { FigureSelect } from "./fields.js";
-import { aboutProgram, aboutAthor } from './info.js'
+import { Handler, CanvasProperties } from "./handler.js";
+import { aboutProgram, aboutAthor } from './info.js';
 
 const canvas = document.getElementById("Canvas")
 
@@ -9,6 +10,8 @@ const canvasHeight = 448
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
 
+const defaultCanvasProperties = new CanvasProperties(canvasWidth, canvasHeight)
+export const handler = new Handler(canvas, defaultCanvasProperties)
 
 const aboutProgramButton = document.getElementById("ProgramBtn");
 const aboutAthorButton = document.getElementById("AuthorBtn");
@@ -21,19 +24,28 @@ aboutProgramButton.addEventListener('click', aboutProgram);
 // undoButton.addEventListener('click', undo);
 
 const drawCircleBtn = document.getElementById('DrawCircleBtn')
-drawCircleBtn.addEventListener('click', drawCircle)
+drawCircleBtn.addEventListener('click', maindrawCircle)
 export const FigColor = document.getElementById('ColorSelect')
+const DrawAlg =  document.getElementById('Alg')
 
-function drawCircle(){
-    console.log("Draw circle");
+function maindrawCircle(){
+    console.log("Draw circle")
     try{
-        let circle = readCircle();
+        var circle = readCircle()
+        // console.log(circle)
     } catch (error) {
-        alert("Ошибка ввода круга");
+        alert("Ошибка ввода круга")
         return
     }
-    
+    // console.log(DrawAlg.value)
+    handler.drawCircle(circle, DrawAlg.value)
+    // handler.CmdLog()
 }
 
+// function reset() {
+// 	handler.setDefault();
+// }
 
-
+// function undo() {
+// 	handler.undo();
+// }

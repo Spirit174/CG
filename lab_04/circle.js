@@ -1,5 +1,5 @@
-import { FigColor } from "./main";
-import { Point } from "./point";
+import { FigColor } from "./main.js";
+import { Point } from "./point.js";
 
 const CircleProp = {
     "centerX": document.getElementById("CircleCenterX"),
