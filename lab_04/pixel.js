@@ -31,9 +31,11 @@ export function drawSPixels(context, pixels, center, isCircle=true, antialliasin
         pixels.forEach(pixel => {
             drawSPixel(context, pixel, center, isCircle)
         });
+        // console.log(pixels, center)
     } else {
         pixels.forEach(pixel => {
             drawSPixel(context, new Pixel(Math.round(pixel.x), Math.round(pixel.y), pixel.color), center, isCircle)
         });
+        // console.log(pixels, center)
     }
 }
