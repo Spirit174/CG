@@ -4,13 +4,15 @@ import { Handler, CanvasProperties } from "./handler.js";
 import { aboutProgram, aboutAthor } from './info.js';
 
 const canvas = document.getElementById("Canvas")
+const canvasBackgroundColor = document.getElementById("ColorBg");
+canvasBackgroundColor.addEventListener("change", updateColorBG);
 
 const canvasWidth = 640
 const canvasHeight = 448
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
 
-const defaultCanvasProperties = new CanvasProperties(canvasWidth, canvasHeight)
+const defaultCanvasProperties = new CanvasProperties(canvasWidth, canvasHeight, canvasBackgroundColor.value)
 export const handler = new Handler(canvas, defaultCanvasProperties)
 
 const aboutProgramButton = document.getElementById("ProgramBtn");
@@ -20,7 +22,7 @@ const resetButton = document.getElementById("ResetBtn");
 
 aboutAthorButton.addEventListener('click', aboutAthor);
 aboutProgramButton.addEventListener('click', aboutProgram);
-// resetButton.addEventListener('click', reset);
+resetButton.addEventListener('click', reset);
 // undoButton.addEventListener('click', undo);
 
 const drawCircleBtn = document.getElementById('DrawCircleBtn')
@@ -42,10 +44,15 @@ function maindrawCircle(){
     // handler.CmdLog()
 }
 
-// function reset() {
-// 	handler.setDefault();
-// }
+function reset() {
+	handler.reset_all();
+}
 
 // function undo() {
 // 	handler.undo();
 // }
+
+function updateColorBG() {
+	handler.updateColorBG(canvasBackgroundColor.value);
+    handler.CmdLog()
+}
