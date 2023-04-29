@@ -1,7 +1,7 @@
 import { FigColor } from "./figcolor.js";
 
-let defaultDotConfig = {
-    radius: 5,
+export let defaultDotConfig = {
+    radius: 7,
     fill: FigColor.value,
     draggable: true,
 };
@@ -14,3 +14,8 @@ export var Dot = function(args) {
     }, defaultDotConfig));
     return dot;
 };
+
+export function getID(dot) {
+    let result = dot.id
+    return Number(result)
+}

@@ -66,23 +66,31 @@
 					</div>
 				</div>
 				<div class="input-group col">
-					<div id="table"></div>
+					<label id="timeMeasure"></label>
 				</div>
 			</div>
 		</div>
 		<div class="container" id="chart-container">
-			<div id="inner-cont">
-				<div id="stage-parent">
-					<div id="Canvas"></div>
+			<div class="col">
+				<div id="inner-cont">
+					<div id="stage-parent">
+						<div id="Canvas"></div>
+						<div class="col-5">
+							<div id="grid-container" class="ag-theme-alpine" style="height: 200px"></div>
+						</div>
+					</div>
 				</div>
 			</div>
         </div>
+
 	</div>
 
     <script src="./node_modules/konva/konva.min.js"></script>
 	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<!-- <script src="./node_modules/tabulator-tables/dist/js/tabulator.min.js"></script> -->
+	<script src="./node_modules/tabulator-tables/dist/js/tabulator.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+	
 
 	<script type="module" src="./main.js"></script>
-	<!-- <script type="module" src="./js/table.js"></script> -->
+	<script type="module" src="./table.js"></script>
 </body>
