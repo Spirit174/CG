@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LAB_05</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar-nav navbar-expand-lg navbar-light bg-light fixed-top">
+		<div id="Menu">
+			<button type="button" class="btn btn-light" id="ProgramBtn">О программе</button>
+			<button type="button" class="btn btn-light" id="AuthorBtn">Об авторе</button>
+			<button type="button" class="btn btn-light" id="UndoBtn">Отмена последнего действия</button>
+			<button type="button" class="btn btn-light" id="ResetBtn">Очистить холст</button>
+		</div>
+	</nav>
+	<div class="container-fluid" id="mainContainer">
+		<div class="container" id="unalteredContainer">
+			<div class="row" id="LabelOneRow">
+                <div class="input-group col" >
+                    <label>Цвет линий</label>
+                </div>
+                <div class="input-group col" >
+                    <label>Цвет фона</label>
+                </div>
+				<div class="input-group col" >
+                    <label>Задержка при отрисовки</label>
+                </div>
+				<div class="input-group col" >
+                    <label></label>
+                </div>
+				<div class="input-group col" >
+                    <label></label>
+                </div>
+            </div>
+			<div class="row" id="InputOneRow">
+				<div class="input-group col">
+                    <input type="color" class="form-control form-control-color" id="ColorSelect" value="#000000" title="Выберите цвет">
+                </div>
+				<div class="input-group col">
+                    <input type="color" class="form-control form-control-color" id="ColorBg" value="#FFFFFF" title="Выберите цвет">
+                </div>
+				<div class="input-group col">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="delaySwitch">
+					</div>	
+				</div>
+				<div class="input-group col">
+					<div class="d-grid gap-1">
+						<button class="btn btn-light" type="button" id="CloseFigBtn">Замкнуть фигуру</button>
+					</div>
+				</div>
+				<div class="input-group col">
+					<div class="d-grid gap-1">
+						<button class="btn btn-light" type="button" id="FillFigBtn">Закрасить фигуру</button>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="InputTwoRow">
+				<div class="input-group col">
+					<input type="text" class="form-control" id="dotXInput" placeholder="X" style="margin-left: 5px;">
+					<input type="text" class="form-control" id="dotYInput" placeholder="Y" style="margin-left: 5px;">
+					<div class="d-grid gap-1">
+						<button class="btn btn-light" type="button" id="AddDotBtn" style="margin-left: 5px;">Добавить точку</button>
+					</div>
+				</div>
+				<div class="input-group col">
+					<div id="table"></div>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="chart-container">
+			<div id="inner-cont">
+				<div id="stage-parent">
+					<div id="Canvas"></div>
+				</div>
+			</div>
+        </div>
+	</div>
+
+    <script src="./node_modules/konva/konva.min.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- <script src="./node_modules/tabulator-tables/dist/js/tabulator.min.js"></script> -->
+
+	<script type="module" src="./main.js"></script>
+	<!-- <script type="module" src="./js/table.js"></script> -->
+</body>

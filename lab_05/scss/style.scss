@@ -1,0 +1,44 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+html {
+	height: 100%;
+	position: relative;
+}
+
+:root {
+	--sideMargin: 10px;
+	--navBarHeight: 40px;
+}
+
+#mainContainer{
+	width: 100%;
+	margin-top: var(--navBarHeight);
+	margin-left: var(--sideMargin);
+	margin-right: var(--sideMargin);
+}
+
+#Menu {
+	height: var(--navBarHeight);
+}
+
+#LabelOneRow{
+	border: 2px solid black;
+	border-left: 0px;
+	border-bottom: 0px;
+	border-right: 0px;
+}
+
+#InputTwoRow{
+	margin-top: 5px;
+}
+
+#Canvas {
+	margin-top: 10px;
+	width: 100%;
+	aspect-ratio: 4/3;
+
+	border: 2px solid black;
+
+	position: relative;
+	align-self: center;
+}
