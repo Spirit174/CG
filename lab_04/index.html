@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LAB_04</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar-nav navbar-expand-lg navbar-light bg-light fixed-top">
+		<div id="Menu">
+			<button type="button" class="btn btn-light" id="ProgramBtn">О программе</button>
+			<button type="button" class="btn btn-light" id="AuthorBtn">Об авторе</button>
+			<button type="button" class="btn btn-light" id="UndoBtn">Отмена последнего действия</button>
+			<button type="button" class="btn btn-light" id="ResetBtn">Очистить холст</button>
+		</div>
+	</nav>
+    <div class="main-container" id="mainContainer">
+        <div class="container" id="unalteredContainer">
+            <div class="row" id="LabelOneRow">
+                <div class="input-group col" >
+                    <label>Способ построения</label>
+                </div>
+                <div class="input-group col"  style="margin-left: 50px">
+                    <label>Вид фигуры</label>
+                </div>
+                <!-- <div class="col-1" style="padding: 10px; margin-left: -100px; margin-right: 20px; margin-top: -10px;"> -->
+                <div class="input-group col" >
+                    <label>Цвет линий</label>
+                </div>
+                <!-- <div class="col-1" style="padding: 10px; margin-left: -40px; margin-right: 20px; margin-top: -10px;"> -->
+                <div class="input-group col" >
+                    <label>Цвет фона</label>
+                </div>
+            </div>
+            <div class="row" id="SelectRow">
+                <div class="input-group col">
+                    <select class="form-select" id="Alg" >
+                        <option value="Lib">Библиотечная функция</option>
+                        <option value="Canon">Каноническое уравнение</option>
+                        <option value="Param">Параметрическое уравнение</option>
+                        <option value="Bresenham">Алгоритм Брезенхема</option>
+                        <option value="Midpoint">Алгоритм средней точки</option>
+                    </select>
+                </div>
+                <div class="input-group col">
+                    <select class="form-select" id="Fig" >
+                        <option value="Circle">Окружность</option>
+                        <option value="Ellipse">Эллипс</option>
+                    </select>
+                </div>
+                <!-- <div class="col-2" style="margin-left: 30px;"> -->
+                <div class="input-group col">
+                    <input type="color" class="form-control form-control-color" id="ColorSelect" value="#000000" title="Выберите цвет">
+                </div>
+                <!-- <div class="col-2" style="margin-left: -160px;"> -->
+                <div class="input-group col">
+                    <input type="color" class="form-control form-control-color" id="ColorBg" value="#FFFFFF" title="Выберите цвет">
+                </div>
+            </div>
+        </div>
+        <div class="container" style="width: 100%; display: block;" id="CircleContainer">
+            <div class="row" id="LabelCircleInfoRow">
+                <label id="LabelCircle">Построение окружности</label>
+            </div>
+            <div class="row" id="LabelCircleRow" >
+                <div class="input-group col">
+                    <label>Координата центра Х</label>
+                </div>
+                <div class="input-group col">
+                    <label>Координата центра Y</label>
+                </div>
+                <div class="input-group col">
+                    <label>Радиус</label>
+                </div>
+            </div>
+            <div class="row" id="CircleInput">
+                <div class="input-group col">
+                    <input type="text" class="form-control" value="100" id="CircleCenterX">  
+                </div>
+                <div class="input-group col">
+                    <input type="text" class="form-control" value="100" id="CircleCenterY">  
+                </div>
+                <div class="input-group col">
+                    <input type="text" class="form-control" value="100" id="CircleRadius">  
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-grid gap-1">
+                    <button class="btn btn-light" type="button" id="DrawCircleBtn">Построить окружность</button>
+                </div>
+            </div>
+            <div class="row">
+                <label id="LabelSpectre">Построение Спектра</label>
+            </div>
+            <div class="row">
+                <form name="CircleParams">
+                    <div class="input-group col" >
+                        <input type="radio" name="CircleParamsRadios" class="btn-check" id="btn-check-CircleStart" autocomplete="off">
+                        <label class="btn btn-dark" for="btn-check-CircleStart" id="CircleStartLabel" style="width: 300px;">Начальный радиус</label>
+                        <input type="text" value="10" class="form-control" placeholder="" id="CircleStartRadius">
+                    </div>
+                    <div class="input-group col">
+                        <input type="radio" name="CircleParamsRadios" class="btn-check" id="btn-check-CircleEnd" autocomplete="off">
+                        <label class="btn btn-dark" for="btn-check-CircleEnd" id="CircleEndLabel" style="width: 300px;">Конечный радиус</label>
+                        <input type="text" value="100" class="form-control" placeholder="" id="CircleEndRadius">
+                    </div>
+                    <div class="input-group col">
+                        <input type="radio" name="CircleParamsRadios" class="btn-check" id="btn-check-CircleStep" autocomplete="off">
+                        <label class="btn btn-dark" for="btn-check-CircleStep" id="CircleStepLabel" style="width: 300px;">Шаг</label>
+                        <input type="text" value="10" class="form-control" placeholder="" id="CircleStep">
+                    </div>
+                    <div class="input-group col">
+                        <input type="radio" name="CircleParamsRadios" class="btn-check" id="btn-check-CircleCount" autocomplete="off" checked>
+                        <label class="btn btn-dark" for="btn-check-CircleCount" id="CircleCountLabel" style="width: 300px;">Количество окружностей</label>
+                        <input type="text" value="100" class="form-control" placeholder="" id="CircleCount">
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" id="DrawSpecBtn">Построить спектр</button>
+                    <button class="btn btn-light" type="button" id="Calcstat">Статистика</button>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="width: 100%; display: none;" id="EllipseContainer">
+            <div class="row" id="LabelEllipseInfoRow">
+                <label id="LabelEllipse">Построение Эллипса</label>
+            </div>
+            <div class="row" id="LabelEllipseRow">
+                <div class="input-group col">
+                    <label>Координата центра Х</label>
+                </div>
+                <div class="input-group col">
+                    <label>Координата центра Y</label>
+                </div>
+                <div class="input-group col">
+                    <label>Ширина RX</label>
+                </div>
+                <div class="input-group col">
+                    <label>Высота RY</label>
+                </div>
+            </div>
+            <div class="row" id="EllipseInput">
+                <div class="input-group col">
+                    <input type="text" class="form-control" value="100" id="EllipseCenterX">  
+                </div>
+                <div class="input-group col">
+                    <input type="text" class="form-control" value="50" id="EllipseCenterY">  
+                </div>
+                <div class="input-group col">
+                    <input type="text" class="form-control" value="100" id="EllipseRadiusX">  
+                </div>
+                <div class="input-group col">
+                    <input type="text" class="form-control" value="50" id="EllipseRadiusY">  
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-grid gap-1">
+                    <button class="btn btn-light" type="button" id="DrawEllipseBtn">Построить эллипс</button>
+                </div>
+            </div>
+            <div class="row">
+                <label id="LabelSpectre">Построение Спектра</label>
+            </div>
+            <div class="row">
+                <form name="EllipseParams">
+                    <div class="input-group col">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="width: 300px;">Начальная ширина RX</span>
+                        </div>
+                        <input type="text" value="40" class="form-control" id="EllipseStartRadiusX">
+                    </div>
+                    <div class="input-group col">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="width: 300px;">Начальная высота RY</span>
+                        </div>
+                        <input type="text" value="60" class="form-control" id="EllipseStartRadiusY">
+                    </div>
+                    <div class="input-group col">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="width: 300px;">Количество эллипсов</span>
+                        </div>
+                        <input type="text" value="50" class="form-control" id="EllipseCount">
+                    </div>
+                    <div class="input-group col">
+                        <input type="radio" name="EllipseParamsRadios" class="btn-check" id="btn-check-EllipseStepX" autocomplete="off">
+                        <label class="btn btn-dark" for="btn-check-EllipseStepX" id="EllipseStepXLabel" style="width: 300px;">Шаг построения по X</label>
+                        <input type="text" value="100" class="form-control" placeholder="" id="EllipseStepX">
+                    </div>
+                    <div class="input-group col">
+                        <input type="radio" name="EllipseParamsRadios" class="btn-check" id="btn-check-EllipseStepY" autocomplete="off" checked>
+                        <label class="btn btn-dark" for="btn-check-EllipseStepY" id="EllipseStepYLabel" style="width: 300px;">Шаг построения по Y</label>
+                        <input type="text" value="100" class="form-control" placeholder="" id="EllipseStepY">
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="d-grid gap-1">
+                    <button class="btn btn-light" type="button" id="DrawSpeccBtn">Построить спектр</button>
+                    <button class="btn btn-light" type="button" id="Calcstat">Статистика</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-auto" id="canvasStartXLabelColumn" style="padding: 0; margin-right: 5px; margin-top: 20px; text-indent: 0%;">
+                <small id="canvasStartXLabel" style="height: 98%; writing-mode: vertical-lr; margin-top: 0px; margin-right: 0px;">0</small>
+            </div>
+            <div class="col-md"> 
+                <div class="row" id="canvasStartYLabelRow" style="height: 20px; margin-bottom: 0; margin-top: 0; text-indent: 0%;">
+                    <small id="canvasStartYLabel" style="margin-left: 0px;">0</small>
+                </div>
+                <canvas id="Canvas"></canvas>
+                <div class="row" id="bottomRightYLabelRow" style="height: 20px; margin-bottom: 0; margin-top: -10px;">
+                    <small id="bottomRightYLabel" style="margin-left: 0px;">0</small>
+                </div>
+            </div>
+            <div class="col-md-auto" id="bottomRightXLabelColumn" style="padding: 0; margin-top: 20px; margin-left: -13px; margin-right: 20px;">
+                <small id="bottomRightXLabel" style="height: 98%; writing-mode: vertical-lr; margin-top: 0px;">0</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <canvas id="ellipseTimeChart"> </canvas>
+            </div>
+            <div class="col-6">
+                <canvas id="circleTimeChart"></canvas>
+            </div>
+        </div>
+    
+    </div>
+    
+
+    <script type="module" src="./fields.js"></script>
+    <script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script type="module" src="./main.js"></script>
+	<!-- <script type="module" src="./charts.js"></script> -->
+</body>
